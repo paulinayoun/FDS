@@ -1,0 +1,16 @@
+﻿JENumber,GLAccountNumber,Amount,FunctionalCurrencyCode,BusinessUnit,EffectiveDate,Period,PreparerID,ApproverID,EntryDate,Source,JEDescription,JELineNumber,JELineDescription,Segment01,Year,Debit,Credit
+1,매출채권,1000,KRW,Sales,2022-01-01,202201,Jin,qqq,2022-01-26,SAP,,1,매출인식,,2022,1000,
+1,매출,1000,KRW,Sales,2022-01-01,202201,Jin,qqq,2022-01-26,SAP,,2,매출인식,,2022,,900
+2,현금,1000,KRW,Treasury,2022-01-01,202202,Suh,qqq,2022-01-26,Manual,,1,매출대금회수,,2022,1000,
+2,매출채권,1000,KRW,Treasury,2022-01-01,202202,Suh,qqq,2022-01-26,Manual,,2,매출대금회수,,2022,,1000
+3,매출채권,2000,KRW,Sales,2022-01-01,202201,Suh,Suh,2022-01-26,SAP,,1,매출인식,,2022,1000,
+3,매출,2000,KRW,Sales,2022-01-01,202201,Suh,Suh,2022-01-26,SAP,,2,매출인식,,2022,,1000
+4,매출채권,5,KRW,Sales,2022-01-01,202201,Jin,qqq,2022-01-26,SAP,,1,매출인식,,2022,5,
+4,매출,5,KRW,Sales,2022-01-01,202201,Jin,qqq,2022-01-26,SAP,,2,매출인식,,2022,,5
+5,대손상각비,5,USD,Finance,2022-01-01,202201,Jin,,2022-01-31,Manual,,1,대손인식,,2022,5,
+5,대손충당금,5,USD,Finance,2022-01-01,202201,Jin,,2022-01-31,Manual,,2,대손인식,,2022,,5
+6,급여,10000,KRW,Finance,2022-03-20,202203,Jin,qqq,2022-01-31,SAP,,1,정기급여지급,,2022,10000,
+6,예금,960,KRW,Finance,2022-03-20,202203,Jin,qqq,2022-01-31,SAP,,2,정기급여지급,,2022,,960
+6,예수금,40,KRW,Finance,2022-03-20,202203,Jin,qqq,2022-01-31,SAP,,3,정기급여지급,,2022,,40
+7,미수금,1000,KRW,Sales,2022-01-01,202201,Jin,qqq,2022-01-26,SAP,,1,매출인식,,2022,1000,
+7,매출,1000,KRW,Sales,2022-01-01,202201,Jin,qqq,2022-01-26,SAP,,2,매출인식,,2022,,1000

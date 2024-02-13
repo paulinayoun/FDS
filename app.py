@@ -20,7 +20,7 @@ client = OpenAI(api_key=API_KEY)
 
 warnings.filterwarnings("ignore")
 st.set_option('deprecation.showPyplotGlobalUse', False)
-st.set_page_config(page_icon="chat2vis.png",layout="wide",page_title="FDS")
+st.set_page_config(page_icon="💰",layout="wide",page_title="FDS 테스트 페이지")
 
 st.markdown("<h4 style='text-align: center;padding-top: 0rem;'>테스트</h4>", unsafe_allow_html=True)
 

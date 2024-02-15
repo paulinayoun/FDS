@@ -20,9 +20,9 @@ client = OpenAI(api_key=API_KEY)
 
 warnings.filterwarnings("ignore")
 st.set_option('deprecation.showPyplotGlobalUse', False)
-st.set_page_config(page_icon="chat2vis.png",layout="wide",page_title="FDS")
+st.set_page_config(page_icon="💰",layout="wide",page_title="FDS 테스트 페이지")
 
-st.markdown("<h4 style='text-align: center;padding-top: 0rem;'>테스트</h4>", unsafe_allow_html=True)
+st.markdown("<h4 style='text-align: center;padding-top: -4rem;'>테스트</h4>", unsafe_allow_html=True)
 
 available_models = {"ChatGPT-3.5": "gpt-3.5-turbo"}
 
@@ -78,10 +78,6 @@ model_count = len(selected_models)
 
 thread_id = "thread_5OwySoM21wXjTNrAU1NaXCcZ"
 assistant_id = "asst_x3aeIz36Q5NptIOIb5NhIwxK" #개인 계정에 생성된 어시스턴스
-
-
-
-
 
 
 # Execute chatbot query
@@ -236,6 +232,7 @@ if prompt and model_count > 0:
     # 마지막 메세지에 UI 추가하기
     with st.chat_message(messages.data[0].role):
         st.write(messages.data[0].content[0].text.value)
+        print(messages.data[0].content[0].text.value)
 #         st.image(image_path, caption="Image Caption")
 
 # file_id = file_id

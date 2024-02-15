@@ -18,7 +18,8 @@ def run_request(question_to_ask, model_type, key):
 
     if model_type == "gpt-4" or model_type == "gpt-3.5-turbo" :
         # Run OpenAI ChatCompletion API
-        task = "Generate Python Code Script. 너는 재무 기록에서 이상 징후를 감지하는 데 훈련된 AI야. 너의 역할은 재무부정을 방지하기 위해 내부통제 위험요소를 파악하고 전표의 데이터에 오류나 누락이 없는지 확인하는 거야. 현금 출납 내역이 기록된 총계정원장 파일을 첨부파일로 같이 줄거야. 그 파일 내에서 정확하게 일치하는 부분을 찾아서 답변해줘."
+        task = "Generate Python Code Script."
+        task = task + "당신은 재무 기록에서 이상 징후를 감지하는 데 훈련된 AI입니다. 당신의 역할은 재무부정을 방지하기 위해 내부통제 위험요소를 파악하고 전표의 데이터에 오류나 누락이 없는지 확인하는 것입니다. 출납 내역이 기록된 총계정원장 파일을 첨부파일로 같이 줄 것입니다. 그 파일 내에서 정확하게 일치하는 부분을 찾아서 답변하십시오. "
         openai.api_key = key
         response = client.chat.completions.create(
             model=model_type,
@@ -57,15 +58,15 @@ def format_response( res):
         res = res_before + res_after
     return res
 
-def format_question(primer_desc,primer_code , question, model_type):
+def format_question(primer_desc,primer_code , prompt, model_type):
     # Fill in the model_specific_instructions variable
     instructions = ""
     if model_type == "Code Llama":
         # Code llama tends to misuse the "c" argument when creating scatter plots
         instructions = "\nDo not use the 'c' argument in the plot function, use 'color' instead and only pass color names like 'green', 'red', 'blue'."
     primer_desc = primer_desc.format(instructions)  
-    # Put the question at the end of the description primer within quotes, then add on the code primer.
-    return  '"""\n' + primer_desc + question + '\n"""\n' + primer_code
+    # Put the prompt at the end of the description primer within quotes, then add on the code primer.
+    return  '"""\n' + primer_desc + prompt + '\n"""\n' + primer_code
 
 def get_primer(df_dataset,df_name):
     # Primer function to take a dataframe and its name
